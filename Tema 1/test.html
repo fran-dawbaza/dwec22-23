@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+</head>
+<body>
+    <h1>Pregunta 1</h1>
+    <h2 id="pregunta1">¿Cuál es la capital de La India?</h2>
+    <div>
+        <button id="dheli" onclick="respuestaCorrecta('pregunta1');">Nueva Dheli</button>
+        <button id="ankara" onclick="respuestaIncorrecta('pregunta1')">Ankara</button>
+    </div>
+    <h2 id="pregunta2">¿Cúando llegó el hombre a la luna?</h2>
+    <div>      
+        <button id="lunaNoOk" onclick="respuestaIncorrecta('pregunta2')">1970</button>
+        <button id="lunaOk" onclick="respuestaCorrecta('pregunta2')">1969</button>
+    </div>    
+    <script src="js/test.js"></script>
+</body>
+</html>
