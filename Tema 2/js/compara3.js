@@ -1,3 +1,5 @@
+"use strict";
+
 function compara3 (evento){
     evento.preventDefault();
     const n1 = +document.getElementById('n1').value;
@@ -6,8 +8,29 @@ function compara3 (evento){
 
     console.log(n1);
 
+    
     const resultado = document.getElementById('resultado');
-    resultado.innerHTML ='n1 es mayor que n2 y n2 mayor que n3';
+    if (n1>=n2 && n1>=n3){
+        if (n2>=n3) {
+            resultado.innerHTML =`${n1} >= ${n2} >= ${n3}`;
+        }
+        else {
+            resultado.innerHTML =`${n1} >= ${n3} >= ${n2}`;
+        }
+    }
+    else if (n2>=n1 && n2>=n3 && n1>=n3) {
+        resultado.innerHTML =`${n2} >= ${n1} >= ${n3}`;
+    }
+    else if (n2>=n3 && n2>=n1 && n3>=n1){
+        resultado.innerHTML =`${n2} >= ${n3} >= ${n1}`;
+    }
+    else if (n3>=n2 && n3>=n1 && n2>=n1) {
+        resultado.innerHTML =`${n3} >= ${n2} >= ${n1}`;
+    }
+    else {
+        resultado.innerHTML =`${n3} >= ${n1} >= ${n2}`;
+    }
+
 }
 
 document
