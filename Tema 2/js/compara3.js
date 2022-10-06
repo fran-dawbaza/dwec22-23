@@ -10,15 +10,40 @@ function compara3 (evento){
 
     
     const resultado = document.getElementById('resultado');
-    if (n1>=n2 && n1>=n3){
-        if (n2>=n3) {
-            resultado.innerHTML =`${n1} >= ${n2} >= ${n3}`;
+    if (n1>=n2) {
+        if ( n1>=n3){
+            if (n2>=n3) {
+                resultado.innerHTML =`${n1} >= ${n2} >= ${n3}`;
+            }
+            else {
+                resultado.innerHTML =`${n1} >= ${n3} >= ${n2}`;
+            }
         }
-        else {
-            resultado.innerHTML =`${n1} >= ${n3} >= ${n2}`;
+        else { // n1>=n2 && n1<n3 // n3>n1>=n2
+            resultado.innerHTML =`${n3} >= ${n1} >= ${n2}`;
         }
     }
-    else if (n2>=n1 && n2>=n3 && n1>=n3) {
+    else { // n1<n2
+        if (n3<n1 ) { // n3<n1<n2 === n2>n1>n3
+            resultado.innerHTML =`${n2} >= ${n1} >= ${n3}`;
+        }
+        else { // n1<n2 && n3>=n1 === n3>=n1 && n2>n1
+            if (n2>=n3){ // n3>=n1 && n2>n1 && n2>=n3 === n2>=n3>=n1
+                resultado.innerHTML =`${n2} >= ${n3} >= ${n1}`;
+            }
+            else { //n3>=n2>=n1
+                resultado.innerHTML =`${n3} >= ${n2} >= ${n1}`;
+            }
+        }
+    } 
+    
+    /* if (n1>=n2 && n2>=n3 && n1>=n3) {
+        resultado.innerHTML =`${n1} >= ${n2} >= ${n3}`;
+    }
+    else if (n1>=n2 && n3>=n2 && n1>=n3){
+        resultado.innerHTML =`${n1} >= ${n3} >= ${n2}`;
+    }
+    if (n2>=n1 && n2>=n3 && n1>=n3) {
         resultado.innerHTML =`${n2} >= ${n1} >= ${n3}`;
     }
     else if (n2>=n3 && n2>=n1 && n3>=n1){
@@ -30,7 +55,7 @@ function compara3 (evento){
     else {
         resultado.innerHTML =`${n3} >= ${n1} >= ${n2}`;
     }
-
+*/
 }
 
 document
