@@ -6,10 +6,16 @@ function compara3 (evento){
     const n2 = +document.getElementById('n2').value;
     const n3 = +document.getElementById('n3').value;
 
+    if (Number.isNaN(n1) || Number.isNaN(n2) || Number.isNaN(n3)) {
+        alert('Los números introducidos deben ser valores numéricos');
+        return;
+    }
+
     console.log(n1);
 
     
     const resultado = document.getElementById('resultado');
+
     if (n1>=n2) {
         if ( n1>=n3){
             if (n2>=n3) {
