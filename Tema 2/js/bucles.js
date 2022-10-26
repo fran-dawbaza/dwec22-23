@@ -92,6 +92,6 @@ console.log('Debe dar 1: '+ fibonacciRecursivo(2));
 console.log('Debe dar 2: '+ fibonacciRecursivo(3));
 console.log('Debe dar 8: '+ fibonacciRecursivo(6));
 console.log('Debe dar 21: '+ fibonacciRecursivo(8));
-console.time('fiboRecursivo50');
-console.log('fibonnacci(50): '+ fibonacciRecursivo(50));
-console.timeEnd('fiboRecursivo50');
+//console.time('fiboRecursivo50');
+//console.log('fibonnacci(50): '+ fibonacciRecursivo(50)); //tarda demasiado
+//console.timeEnd('fiboRecursivo50');
