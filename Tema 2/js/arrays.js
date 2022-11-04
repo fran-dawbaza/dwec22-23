@@ -7,6 +7,20 @@ const tareas = [
     "Ir a música"
 ];
 
+/* 
+El método filter devuelve un array nuevo filtrado con una
+condición, que se establecerá en el callback.
+filter necesita un "predicado" como callback.
+Un predicado es una función que devuelve true o false. 
+El callback se ejecutará automáticamente para cada uno 
+de los elementos del array. Además,este callback puede usar 
+hasta 3 parámetros: 
+- El primer parámetro será un elemento del array,
+- El segundo parámetro, si se usa, será el índice o posición
+que ocupa ese elemento en el array.
+- El tercer parámetro, si se usa, será el propio array.
+
+ */
 const tareasSinO = 
     tareas.filter(elemento => !elemento.includes('o'));
 
