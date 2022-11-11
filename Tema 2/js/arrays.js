@@ -65,10 +65,15 @@ ${tareasConLI}
 
 
 const users = [
-    {id: 1, name: "Celina"},
+    {id: 1, name: "Zelina"},
     {id: 2, name: "David"},
     {id: 3, name: "Federico"}
 ];
+
+let someUsers = users.map((user,indice,users) =>
+    user.name +'-> ' + indice + ' de ' + users.length
+);
+
 
 //let user = users.find(item => item.id == 1);
 /*function idEsUno(obj) {
@@ -79,4 +84,13 @@ const users = [
 
 const user = users.find(e => e.name === "Fderico") ?? {id: 'niguno',name:'no encontrado'};
 
-alert('id: ' + user.id + ', name: ' + user.name); // Celina
+//alert('id: ' + user.id + ', name: ' + user.name); 
+
+const numeros = [1 , 5, 3, 7, 21, 14, 31, 16];
+
+const numerosOrdenados = numeros.sort((n1,n2) => n1-n2);
+
+users.sort((a,b)=>a.name.localeCompare(b.name));
+
+console.log(numeros);
+console.log(users);
