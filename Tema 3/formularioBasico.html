@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo básico de formulario y eventos</h1>
+    <form id="formulario" action="#" method="get">
+        <label for="campo1">Texto a introducir:</label>
+        <input type="text" name="campo1" id="campo1" />
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        document.getElementById('formulario')
+            .addEventListener('submit', (evento)=>{
+                evento.preventDefault();
+                console.log(evento);
+                console.log('Has hecho submit');
+                console.log('has introducido: ', 
+                        document.getElementById('campo1').value);
+                document.getElementById('campo1').value = '';
+            });
+    </script>
+</body>
+</html>
