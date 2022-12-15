@@ -277,6 +277,7 @@ const coches = [
 3.- Obtener un array de los coches de marca seat.
 4.- Obtener un array de los coches fabricados después del año 2000.
 5.- Obtener un array sólo con los modelos y años de fabricación en formato 2 últimos dígitos.
-6.- Obtener la suma de los coches con motor diesel.
+6.- Obtener el número de coches con motor diesel.
 7.- Obtener el primer coche cuyo motor no sea diesel.
+8.- Obtener la suma de las longitudes de los modelos no diesel. 
 */
