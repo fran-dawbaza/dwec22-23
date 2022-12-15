@@ -258,3 +258,25 @@ console.log(emailsEnMinusculaDeUsuariosConISinPuntobiz);
 // Haz la suma de las latitudes y longitudes de los usuarios 
 // cuyo nombre de compañía contenga la "e"
 
+
+
+const coches = [
+  {'marca' : 'seat', 'modelo': 'panda', 'año': 1983, 'color': 'blanco', 'motor': 'gasolina'},
+  {'marca' : 'ford', 'modelo': 'mondeo', 'año': 2019, 'color': 'rojo', 'motor': 'diesel'},
+  {'marca'  : 'toyota', 'modelo': 'avensis', 'año': 2019, 'color': 'negro', 'motor': 'híbrido'},
+  {'marca'  : 'ford', 'modelo': 'fiesta', 'año': 1996, 'color': 'blanco', 'motor': 'diesel'},
+  {'marca'  : 'opel', 'modelo': 'astra', 'año': 2006, 'color': 'rojo', 'motor': 'diesel'},
+  {'marca'  : 'skoda', 'modelo': 'fabia', 'año': 1999, 'color': 'azul', 'motor': 'diesel'},
+  {'marca' : 'seat', 'modelo': 'leon', 'año': 2020, 'color': 'gris', 'motor': 'diesel'},
+  {'marca' : 'seat', 'modelo': 'ibiza', 'año': 2019, 'color': 'negro', 'motor': 'gasolina'}
+];
+  
+/*
+Obtener un array de coches ordenado por modelo.
+Obtener un array de coches ordenado por año y motor (la función de ordenación debe incluir los 2 criterios).
+Obtener un array de los coches de marca seat.
+Obtener un array de los coches fabricados después del año 2000.
+Obtener un array sólo con los modelos y años de fabricación en formato 2 últimos dígitos.
+Obtener la suma de los coches con motor diesel.
+Obtener el primer coche cuyo motor no sea diesel.
+*/
