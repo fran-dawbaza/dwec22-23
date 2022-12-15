@@ -271,12 +271,12 @@ const coches = [
   {'marca' : 'seat', 'modelo': 'ibiza', 'año': 2019, 'color': 'negro', 'motor': 'gasolina'}
 ];
   
-/*
-Obtener un array de coches ordenado por modelo.
-Obtener un array de coches ordenado por año y motor (la función de ordenación debe incluir los 2 criterios).
-Obtener un array de los coches de marca seat.
-Obtener un array de los coches fabricados después del año 2000.
-Obtener un array sólo con los modelos y años de fabricación en formato 2 últimos dígitos.
-Obtener la suma de los coches con motor diesel.
-Obtener el primer coche cuyo motor no sea diesel.
+/* Podéis usar los métodos find, sort, map, filter y reduce
+1.- Obtener un array de coches ordenado por modelo.
+2.- Obtener un array de coches ordenado por año y motor (la función de ordenación debe incluir los 2 criterios).
+3.- Obtener un array de los coches de marca seat.
+4.- Obtener un array de los coches fabricados después del año 2000.
+5.- Obtener un array sólo con los modelos y años de fabricación en formato 2 últimos dígitos.
+6.- Obtener la suma de los coches con motor diesel.
+7.- Obtener el primer coche cuyo motor no sea diesel.
 */
