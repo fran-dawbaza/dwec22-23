@@ -272,8 +272,17 @@ const coches = [
 ];
   
 /* Podéis usar los métodos find, sort, map, filter y reduce
-1.- Obtener un array de coches ordenado por modelo.
-2.- Obtener un array de coches ordenado por año y motor (la función de ordenación debe incluir los 2 criterios).
+1.- Obtener un array de coches ordenado por modelo.*/
+
+const copiaCoches = [...coches]; // ojo, solo copia referencias!!!
+
+copiaCoches.sort((c1,c2)=>{
+  if (c1.modelo < c2.modelo) return -1;
+  else if (c1.modelo > c2.modelo) return 1;
+  else return 0;
+});
+console.log(copiaCoches);
+/*2.- Obtener un array de coches ordenado por año y motor (la función de ordenación debe incluir los 2 criterios).
 3.- Obtener un array de los coches de marca seat.
 4.- Obtener un array de los coches fabricados después del año 2000.
 5.- Obtener un array sólo con los modelos y años de fabricación en formato 2 últimos dígitos.
