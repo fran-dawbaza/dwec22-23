@@ -4,27 +4,65 @@ console.log(posts);
 
 const contenedor = document.getElementById('contenedor');
 
-/* queremos hacer esto:
+/* queremos hacer esto para cada post:
 <article>
     <h3>titulo</h3>
     <p>contenido ... </p>
 </article>
+<hr>
 */
-// Primero lo hacemos con createElement
-const entrada = document.createElement('article');
-const titulo = document.createElement('h3');
-const contenido = document.createElement('p');
+// Primero lo hacemos con createElement y documentFragment
+/*const fragmento = document.createDocumentFragment();
+for (let post of posts) {
+    let entrada = document.createElement('article');
+    let titulo = document.createElement('h3');
+    let contenido = document.createElement('p');
 
-titulo.append(posts[0].title);
-contenido.append(posts[0].body);
-entrada.append(titulo,contenido);
-contenedor.append(entrada); // lo añado al DOM
+    titulo.append(post.title);
+    contenido.append(post.body);
+    entrada.append(titulo,contenido);
+    entrada.append(document.createElement('hr'));
+    fragmento.append(entrada); // lo añado al fragmento
+}
 
-// El segundo post lo  insertamos de otra forma
+contenedor.append(fragmento);*/
 
-let plantilla = `
+// El segundo post lo  insertamos de otra forma: template string (backstics)
+
+const plantilla = `
 <article>
-<h3>${posts[1].title}</h3>
-<p>${posts[1].title}</p>
-</article>`;
-contenedor.innerHTML += plantilla;
+    <h3>${posts[1].title}</h3>
+    <p>${posts[1].title}</p>
+</article>
+<hr>`;
+//contenedor.innerHTML += plantilla;
+
+contenedor.innerHTML += posts.map(p=>`
+                        <article>
+                            <h3>${p.title}</h3>
+                            <p>${p.title}</p>
+                        </article>
+                        <hr>`).join('');
+
+const ocultaArticulo = evento => {
+    if (evento.target.tagName === 'H3'){
+        evento.target.parentElement.hidden=true;
+        console.log(evento.target.parentElement.nextSiblingElement);
+        evento.target.parentElement.nextElementSibling.hidden=true;
+        console.log('currentTarget: ', evento.currentTarget);    
+    }
+};
+document.body.addEventListener('click', ocultaArticulo);
+
+/* De la siguiente forma también funciona pero no es eficiente, es contraproducente
+const ocultaH3 = evento => {
+    evento.target.parentElement.hidden=true;
+    evento.target.parentElement.nextElementSibling.hidden=true;
+}
+
+const encabezados = document.querySelectorAll('h3');
+
+for (let encabezado of encabezados) {
+    encabezado.addEventListener('click', ocultaH3);
+}
+*/
