@@ -1,0 +1,19 @@
+<!doctype html>
+<body>
+<form name="my">
+  <input name="one" value="1">
+  <input name="two" value="2">
+</form>
+
+<script>
+  // obtención del formulario
+  let form = document.forms.my; // elemento <form name="my">
+
+  // get the element
+  let elem = form.elements.one; // elemento <input name="one">
+
+  //alert(elem.value); // 1
+  console.dir(document.forms.my)
+</script>
+</body>
+</html>
