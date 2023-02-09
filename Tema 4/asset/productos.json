@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "Camiseta T",
+        "descripcion": "Camiseta muy chula",
+        "precio": 8.95
+    },
+    {
+        "id": 2,
+        "nombre": "Pantalón de pana",
+        "descripcion": "Pantalón vintage super cool",
+        "precio": 85.50
+    },
+    {
+        "id": 3,
+        "nombre": "Gafas de sol",
+        "descripcion": "Gafas",
+        "precio": 120.60
+    }
+]
