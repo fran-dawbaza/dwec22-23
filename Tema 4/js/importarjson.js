@@ -12,11 +12,11 @@ const productos = await resultado.json();
 //main(productos);
 
 const productosBaratos20 = productos.filter(p=>p.precio<20);
-    const listadoProductos = '<ul>' 
+const listadoProductos = '<ul>' 
                             + productosBaratos20
                                         .map(p=>`<li>${p.nombre}</li>`)
                                         .join('')
                             + '</ul>';
-    document.getElementById('datosDeJSON').innerHTML = listadoProductos;
+document.getElementById('datosDeJSON').innerHTML = listadoProductos;
 
 
